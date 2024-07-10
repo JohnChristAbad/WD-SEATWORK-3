@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(241, 239, 227) ;
+  }
+
+ 
+ /* pangalawa header */
+  .header-2 {
+    overflow: hidden;
+    background-color: rgb(221, 183, 148);
+    padding: 20px 10px;
+  }
+  
+  .header-2 a {
+    float: left;
+    color: #fcdfb9;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header-2 a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header-2 a:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  .header-2 a.active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  
+  .header-right {
+    float: right;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .header-2 a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }
