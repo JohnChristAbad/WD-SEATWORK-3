@@ -1,114 +1,59 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:rgb(241, 239, 227) ;
-  }
-  /* unang header */
-.header-1 h1 {
-    padding: 10px 16px;
-    background: rgb(221, 183, 148);
-    color: #fcdfb9;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    
-  }
- 
- /* pangalawa header */
-  .header-2 {
-    margin-top: 80px;
-    overflow: hidden;
-    background-color: rgb(221, 183, 148);
-    padding: 20px 10px;
-  }
-  
-  .header-2 a {
-    float: left;
-    color: #fcdfb9;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
-  }
-  
-  .header-2 a.logo {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .header-2 a:hover {
-    background-color: #ffffff;
-    color: black;
-  }
-  
-  .header-2 a.active {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-  }
-  
-  .header-right {
-    float: right;
-  }
-  
-  @media screen and (max-width: 500px) {
-    .header-2 a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    
-    .header-right {
-      float: none;
-    }
-  }
+:root {
+	/* Base font size */
+	font-size: 10px;
 
- /* pangatlo header */
-  *{padding: 0; margin: 0; box-sizing: border-box;}
-  body{height: 900px;}
-  .header-3 header {
-    margin-top: 15px;
-      background: url(../img/Archipelago.jpg);
-      text-align: center;
-      width: 100%;
-      height: auto;
-      background-size: cover;
-      background-attachment: fixed;
-      position: relative;
-      overflow: hidden;
-      border-radius: 0 0 85% 85% / 30%;
-  }
-  header .overlay{
-      width: 100%;
-      height: 100%;
-      padding: 50px;
-      color: #FFF;
-      text-shadow: 1px 1px 1px #333;
-  }
-  
-  .header-3 h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 80px;
-      margin-bottom: 30px;
-  }
-  
-  h3, p {
-      font-family: 'Open Sans', sans-serif;
-      margin-bottom: 30px;
-  }
-  
-  button {
-      border: none;
-      outline: none;
-      padding: 10px 20px;
-      border-radius: 50px;
-      color: #333;
-      background: #fff;
-      margin-bottom: 50px;
-      box-shadow: 0 3px 20px 0 #0000003b;
-  }
-  button:hover{
-      cursor: pointer;
-  }
+	/* Heading height variable*/
+	--heading-height: 30em;
+}
+
+body {
+	font-family: "Roboto", Arial, sans-serif;
+	min-height: 100vh;
+	background-color: #ffffff;
+}
+
+.header-4 {
+	position: fixed;
+	width: 100%;
+	height: var(--heading-height);
+}
+
+/* Create angled background with 'before' pseudo-element */
+header::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 6em;
+	width: 100%;
+	height: calc(var(--heading-height) + 10em);
+	z-index: -1;
+	transform: skewY(-3.5deg);
+	background: 
+		linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+		url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
+		linear-gradient(#4e4376, #2b5876);
+	background-size: cover;
+	border-bottom: .2em solid #fff;
+}
+
+h1 {
+	font-size: calc(2.8em + 2.6vw);
+	font-weight: 700;
+	letter-spacing: .01em;
+	padding: 10rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #111;
+	color: #fff;
+}
+
+main {
+	padding: calc(var(--heading-height) + 1.5vw) 4em 0;
+}
+
+p {
+	font-size: calc(2em + .25vw);
+	font-weight: 400;
+	line-height: 2;
+	margin-bottom: 1.5em;
+	color: #fcfcfc;
+}
